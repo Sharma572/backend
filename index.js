@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000;
 connectDb(); // mongoDb function with mongoose 
 app.use(express.json())
 app.use("/contact", require("./routes/contactRoute"))
+app.use("/users", require("./routes/userRoute"))
 app.use(errorHandler)
 
 app.listen(PORT,()=>{
